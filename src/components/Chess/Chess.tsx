@@ -13,6 +13,7 @@ const Chess = () => {
   function restart() {
     const newBoard = new BoardClass();
     newBoard.initCells();
+    newBoard.addFigures();
     setBoard(newBoard);
   }
 

@@ -7,7 +7,11 @@ interface CellProps {
 }
 
 const Cell: FC<CellProps> = ({ cell }) => {
-  return <div className={[styles.cell, styles[cell.color]].join(' ')}></div>;
+  return (
+    <div className={[styles.cell, styles[cell.color]].join(' ')}>
+      {cell.figure?.logo && <img src={cell.figure.logo} alt='' />}
+    </div>
+  );
 };
 
 export default Cell;
