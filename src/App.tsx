@@ -1,10 +1,9 @@
-import React from 'react';
-import Counter from './components/Counter';
+import Chess from './components/Chess/Chess';
 
 const App = () => {
   return (
-    <div>
-      <Counter />
+    <div className='app'>
+      <Chess />
     </div>
   );
 };
