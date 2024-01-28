@@ -1,0 +1,16 @@
+.board {
+  width: calc(64px * 8);
+  height: calc(64px * 8);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boardWrapper {
+  width: calc(66px * 8);
+  height: calc(66px * 8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ababab;
+  border-radius: 5px;
+}

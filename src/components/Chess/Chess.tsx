@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Chess.module.scss';
-import Board from '../Board/Board';
+import Board from './Board/Board';
 import { Board as BoardClass } from '../../models/Board';
 import { Player as PlayerClass } from '../../models/Player';
 import { Colors } from '../../models/Colors';
-import LostFigures from '../LostFigures/LostFigures';
-import Timer from '../Timer/Timer';
+import LostFigures from './LostFigureBlock/LostFigures/LostFigures';
+import Timer from './Timer/Timer';
+import LostFigureBlock from './LostFigureBlock/LostFigureBlock';
 
 const Chess = () => {
   const [board, setBoard] = useState(new BoardClass());
@@ -39,10 +40,10 @@ const Chess = () => {
         currentPlayer={currentPlayer}
         swapPlayer={swapPlayer}
       />
-      <div>
-        <LostFigures title='Чёрные фигуры' figures={board.lostBlackFigures} />
-        <LostFigures title='Белые фигуры' figures={board.lostWhiteFigures} />
-      </div>
+      <LostFigureBlock
+        lostBlackFigures={board.lostBlackFigures}
+        lostWhiteFigures={board.lostWhiteFigures}
+      />
     </div>
   );
 };

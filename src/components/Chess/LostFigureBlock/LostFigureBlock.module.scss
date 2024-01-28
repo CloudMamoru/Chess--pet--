@@ -1,0 +1,11 @@
+.lostFigureBlock {
+  height: calc(8 * 64px);
+  width: calc(4 * 64px);
+  border-radius: 5px;
+  background-color: #262421;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}

@@ -1,9 +1,10 @@
 import React, { FC, useEffect, useState } from 'react';
 import styles from './Board.module.scss';
 import Cell from '../Cell/Cell';
-import { Board as BoardClass } from 'src/models/Board';
-import { Cell as CellClass } from 'src/models/Cell';
-import { Player as PlayerClass } from 'src/models/Player';
+import { Board as BoardClass } from '../../../models/Board';
+import { Cell as CellClass } from '../../../models/Cell';
+import { Player as PlayerClass } from '../../../models/Player';
+import { Colors } from '../../../models/Colors';
 
 interface BoardProps {
   board: BoardClass;
@@ -43,20 +44,24 @@ const Board: FC<BoardProps> = ({ board, setBoard, currentPlayer, swapPlayer }) =
 
   return (
     <div>
-      <h3>Текущий игрок {currentPlayer?.color}</h3>
-      <div className={styles.board}>
-        {board.cells.map((row, index) => (
-          <React.Fragment key={index}>
-            {row.map((cell) => (
-              <Cell
-                clickCell={clickCell}
-                cell={cell}
-                key={cell.id}
-                selected={cell.x === selectedCell?.x && cell.y === selectedCell?.y}
-              />
-            ))}
-          </React.Fragment>
-        ))}
+      {/* <h1 className={styles.step}>{`Ход ${
+        currentPlayer?.color === Colors.BLACK ? 'черных' : 'белых'
+      }`}</h1> */}
+      <div className={styles.boardWrapper}>
+        <div className={styles.board}>
+          {board.cells.map((row, index) => (
+            <React.Fragment key={index}>
+              {row.map((cell) => (
+                <Cell
+                  clickCell={clickCell}
+                  cell={cell}
+                  key={cell.id}
+                  selected={cell.x === selectedCell?.x && cell.y === selectedCell?.y}
+                />
+              ))}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styles from './Cell.module.scss';
-import { Cell as CellClass } from 'src/models/Cell';
+import { Cell as CellClass } from '../../../models/Cell';
 
 interface CellProps {
   cell: CellClass;

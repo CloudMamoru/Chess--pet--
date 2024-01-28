@@ -1,9 +1,9 @@
 import Chess from './components/Chess/Chess';
-import './App.scss';
 
 const App = () => {
   return (
     <div className='app'>
+      <h1 className='Chess'>Шахматы</h1>
       <Chess />
     </div>
   );

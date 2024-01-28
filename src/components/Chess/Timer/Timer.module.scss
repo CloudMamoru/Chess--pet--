@@ -1,0 +1,29 @@
+.timer {
+  height: calc(3 * 64px);
+  width: calc(4 * 64px);
+  border-radius: 5%;
+  background-color: #262421;
+  color: #ababab;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.timerButton {
+  display: block;
+  height: 64px;
+  font-size: 16px;
+  width: calc(3 * 64px);
+  background-color: #3692e7;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.step {
+  color: #ababab;
+  text-align: center;
+  padding-bottom: 10px;
+}

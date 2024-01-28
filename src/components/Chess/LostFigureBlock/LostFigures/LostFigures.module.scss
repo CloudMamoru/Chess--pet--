@@ -1,0 +1,21 @@
+.title {
+  color: #ababab;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.lost {
+  height: calc(4 * 50px);
+  width: calc(4 * 56px);
+  background-color: #ababab;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 8px;
+}
+
+.lost img {
+  width: 44px;
+  height: 44px;
+}

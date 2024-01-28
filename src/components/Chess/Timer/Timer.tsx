@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import styles from './Timer.module.scss';
-import { Player as PlayerClass } from '../../models/Player';
-import { Colors } from '../../models/Colors';
+import { Player as PlayerClass } from '../../../models/Player';
+import { Colors } from '../../../models/Colors';
 
 interface TimerProps {
   currentPlayer: PlayerClass | null;
@@ -41,12 +41,19 @@ const Timer: FC<TimerProps> = ({ currentPlayer, restart }) => {
   };
 
   return (
-    <div>
-      <div>
-        <button onClick={handleRestart}>Restart game</button>
+    <div className={styles.timerWrapper}>
+      <h1 className={styles.step}>{`Ход ${
+        currentPlayer?.color === Colors.BLACK ? 'черных' : 'белых'
+      }`}</h1>
+      <div className={styles.timer}>
+        <h2>{blackTime}</h2>
+        <div>
+          <button className={styles.timerButton} onClick={handleRestart}>
+            Перезапустить
+          </button>
+        </div>
+        <h2>{whiteTime}</h2>
       </div>
-      <h2>Черные - {blackTime}</h2>
-      <h2>Белые - {whiteTime}</h2>
     </div>
   );
 };
