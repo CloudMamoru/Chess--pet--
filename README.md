@@ -1,6 +1,6 @@
-# ChessMaster - Online Chess Game
+# Chess
 
-**ChessMaster** is a web-based chess application built with TypeScript and React. This project demonstrates a robust implementation of chess logic, a dynamic and responsive UI, and clean architecture using modern front-end tools.
+**Chess** is a web-based chess application built with TypeScript and React. This project demonstrates a robust implementation of chess logic, a dynamic and responsive UI, and clean architecture using modern front-end tools.
 
 ---
 
